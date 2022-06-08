@@ -5,27 +5,67 @@
     min-width: 30px;
     min-height: 30px;
 
-    div {
+    &::before,
+    &::after {
+        content: '';
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         margin: auto;
-        width: 80%;
-        height: 4px;
-        background-color: var(--clr-ntrl-20);
+        border-radius: 50%;
+    }
 
-        &:first-child {
-            top: 5px;
-            bottom: unset;
-            height: 2px;
+    &::before {
+        background-color: var(--clr-ntrl-1);
+        width: 100%;
+        height: 100%;
+    }
+
+    &::after {
+        background-color: var(--clr-ntrl-0);
+        width: 80%;
+        height: 80%;
+        transition: .2s ease-in-out;
+
+
+    }
+
+    > div {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 60%;
+        height: 2px;
+        background-color: black;
+        transition: .2s ease-in-out;
+
+    }
+
+    &.active {
+        &::after {
+            width: 0;
+            height: 0;
+
+            transition: .2s ease-in-out;
+
         }
 
-        &:last-child {
-            top: unset;
-            bottom: 5px;
-            height: 2px;
+        > div {
+            transition: .2s ease-in-out;
+
+
+            &:first-child {
+                transform: rotate(-45deg);
+            }
+
+            &:last-child {
+                transform: rotate(45deg);
+            }
         }
     }
 }

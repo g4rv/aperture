@@ -10,7 +10,8 @@
     padding: 1rem;
 
     &__wrap {
-        display: none;
+        display: flex;
+        transform: translateX(-200%);
         position: absolute;
         flex-direction: column;
         justify-content: space-between;
@@ -22,9 +23,11 @@
         height: 70vh;
         background-color: var(--clr-ntrl-40);
         box-shadow: inset 0px 15px 20px -10px hsla(var(--clra-ntrl-1)/ .3);
+        transition: .4s ease-in-out;
 
         &.active {
-            display: flex;
+            transform: translateX(0);
+            transition: .4s ease-in-out;
         }
     }
 

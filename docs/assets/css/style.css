@@ -315,28 +315,60 @@ html {
   min-height: 30px;
 }
 
-.burger div {
+.burger::before,
+.burger::after {
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
+  border-radius: 50%;
+}
+
+.burger::before {
+  background-color: var(--clr-ntrl-1);
+  width: 100%;
+  height: 100%;
+}
+
+.burger::after {
+  background-color: var(--clr-ntrl-0);
   width: 80%;
-  height: 4px;
-  background-color: var(--clr-ntrl-20);
+  height: 80%;
+  transition: 0.2s ease-in-out;
 }
 
-.burger div:first-child {
-  top: 5px;
-  bottom: unset;
+.burger > div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 60%;
   height: 2px;
+  background-color: black;
+  transition: 0.2s ease-in-out;
 }
 
-.burger div:last-child {
-  top: unset;
-  bottom: 5px;
-  height: 2px;
+.burger.active::after {
+  width: 0;
+  height: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.burger.active > div {
+  transition: 0.2s ease-in-out;
+}
+
+.burger.active > div:first-child {
+  transform: rotate(-45deg);
+}
+
+.burger.active > div:last-child {
+  transform: rotate(45deg);
 }
 
 .btn {
@@ -496,26 +528,28 @@ html {
   border-radius: 8px;
 }
 
-:root ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0.5em;
   background: hsla(220deg, 0%, 0%, 0.1);
 }
 
-:root ::-webkit-scrollbar-thumb {
-  height: 5%;
+::-webkit-scrollbar-thumb {
+  height: 50px;
   background-color: var(--clr-ntrl-10);
   border-radius: 2em;
 }
 
-:root ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--clr-ntrl-30);
+  box-shadow: inset 0px 0px 0px 1px white;
+}
+
+::-webkit-scrollbar-thumb:active {
   background-color: var(--clr-ntrl-40);
+  box-shadow: inset 0px 0px 0px 1px white;
 }
 
-:root ::-webkit-scrollbar-thumb:active {
-  background-color: var(--clr-ntrl-50);
-}
-
-:root ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   margin-top: var(--header-h);
 }
 
@@ -538,7 +572,8 @@ html {
 }
 
 .nav__wrap {
-  display: none;
+  display: flex;
+  transform: translateX(-200%);
   position: absolute;
   flex-direction: column;
   justify-content: space-between;
@@ -550,10 +585,12 @@ html {
   height: 70vh;
   background-color: var(--clr-ntrl-40);
   box-shadow: inset 0px 15px 20px -10px hsla(var(--clra-ntrl-1)/0.3);
+  transition: 0.4s ease-in-out;
 }
 
 .nav__wrap.active {
-  display: flex;
+  transform: translateX(0);
+  transition: 0.4s ease-in-out;
 }
 
 .nav__list {
