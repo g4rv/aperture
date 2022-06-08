@@ -1,0 +1,27 @@
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &__social {
+    }
+
+    &__link {
+        display: block;
+        line-height: 0;
+    }
+
+    &__ico {
+        fill: var(--clr-ntrl-30);
+    }
+}
+
+@media (hover: hover) {
+    .socials {
+        &__ico {
+            &:hover {
+                fill: var(--clr-ntrl-1);
+            }
+        }
+    }
+}

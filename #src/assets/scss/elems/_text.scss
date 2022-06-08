@@ -1,0 +1,10 @@
+.text {
+    color: var(--clr-ntrl-30);
+    font-size: var(--fz-14);
+    line-height: var(--lh-b);
+
+    &--strch {
+        text-transform: uppercase;
+        letter-spacing: .15em;
+    }
+}

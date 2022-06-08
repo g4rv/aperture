@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./layout/head.html', {
+    "title": "Aperture"
+})
+<body>
+@@include('./layout/header.html')
+<main class="main">
+    <section class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title h1-like" tabindex="0">Aperture Studios</h1>
+                <p class="hero__suptitle suptitle text text--strch" tabindex="0">Photographer & Filmmaker</p>
+                <p class="hero__text text" tabindex="0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse varius enim in eros elementum tristique.
+                    Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+                    Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
+                    Nunc ut sem vitae risus tristique posuere.
+                </p>
+            </div>
+            <div class="hero__bg">
+                <img src="@img/jpg/iceland.jpg" alt="" class="hero__img">
+                <ul class="photo-meta">
+                    <li class="photo-meta__meta">
+                        <svg class="photo-meta__ico photo-meta__ico--shutter" width="25" height="25">
+                            <use xlink:href="#ico_shutter"></use>
+                        </svg>
+                        <span class="photo-meta__value">1&#34;</span>
+                    </li>
+                    <li class="photo-meta__meta">
+                        <svg class="photo-meta__ico photo-meta__ico--aperture" width="25" height="25">
+                            <use xlink:href="#ico_aperture"></use>
+                        </svg>
+                        <span class="photo-meta__value">f/16</span>
+                    </li>
+                    <li class="photo-meta__meta">
+                        <svg class="photo-meta__ico photo-meta__ico--iso" width="25" height="25">
+                            <use xlink:href="#ico_iso"></use>
+                        </svg>
+                        <span class="photo-meta__value">400</span>
+                    </li>
+                    <li class="photo-meta__meta">
+                        <svg class="photo-meta__ico photo-meta__ico--location" width="25" height="25">
+                            <use xlink:href="#ico_location"></use>
+                        </svg>
+                        <span class="photo-meta__value">Japan</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="our-work">
+        <div class="container container--sml">
+            <h2 class="our-work__title h2-like" tabindex="0">What we do.</h2>
+            <p class="our-work__subtitle subtitle" tabindex="0">The areas that we're specialized in.</p>
+            <ul class="our-work__list services">
+                <li class="services__service service">
+                    <div class="service__content">
+                        <h3 class="service__title text text--strch" tabindex="0">Product Photography</h3>
+                        <p class="service__descr text" tabindex="0">
+                            Cras commodo consequat orci, in convallis risus egestas non.
+                            Nulla efficitur auctor hendrerit.
+                            Etiam ut orci varius, faucibus libero ac, cursus quam.
+                        </p>
+                        <a href="" class="service__btn btn">
+                            <svg width="20" height="20">
+                                <use xlink:href="#aperture"></use>
+                            </svg>
+                            <span>Read more</span>
+                        </a>
+                    </div>
+                    <div class="service__bg">
+                        <img src="@img/jpg/product_photography.jpg" alt="" class="service__img">
+                    </div>
+                </li>
+                <li class="services__service service">
+                    <div class="service__content">
+                        <h3 class="service__title text text--strch" tabindex="0">Architecture Photography</h3>
+                        <p class="service__descr text" tabindex="0">
+                            Aenean porta neque eget consequat fringilla.
+                            Vestibulum ultrices, orci nec egestas pharetra,
+                            ligula est semper enim, nec auctor sapien leo nec purus.
+                            Fusce tincidunt aliquet sapien, sit amet rhoncus leo imperdiet nec.
+                        </p>
+                        <a href="" class="service__btn btn">
+                            <svg width="20" height="20">
+                                <use xlink:href="#aperture"></use>
+                            </svg>
+                            <span>Read more</span>
+                        </a>
+                    </div>
+                    <div class="service__bg">
+                        <img src="@img/jpg/architecture_photography.jpg" alt="" class="service__img">
+                    </div>
+                </li>
+                <li class="services__service service">
+                    <div class="service__content">
+                        <h3 class="service__title text text--strch" tabindex="0">Drone Photography</h3>
+                        <p class="service__descr text" tabindex="0">
+                            Mauris euismod elit et nisi ultrices, ut faucibus orci tincidunt.
+                            Duis tristique sed lorem a vestibulum. Cras commodo consequat orci,
+                            in convallis risus egestas non. Nulla efficitur auctor hendrerit.
+                            Etiam ut orci varius, faucibus libero ac, cursus quam.
+                        </p>
+                        <a href="" class="service__btn btn">
+                            <svg width="20" height="20">
+                                <use xlink:href="#aperture"></use>
+                            </svg>
+                            <span>Read more</span>
+                        </a>
+                    </div>
+                    <div class="service__bg">
+                        <img src="@img/jpg/drone_photography.jpg" alt="" class="service__img">
+                    </div>
+                </li>
+                <li class="services__service service">
+                    <div class="service__content">
+                        <h3 class="service__title text text--strch" tabindex="0">Wildlife Photography</h3>
+                        <p class="service__descr text" tabindex="0">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Nullam scelerisque aliquam odio et faucibus.
+                            Nulla rhoncus feugiat eros quis consectetur.
+                            Morbi neque ex, condimentum dapibus congue et,
+                            vulputate ut ligula. Vestibulum sit amet urna turpis.
+                        </p>
+                        <a href="" class="service__btn btn">
+                            <svg width="20" height="20">
+                                <use xlink:href="#aperture"></use>
+                            </svg>
+                            <span>Read more</span>
+                        </a>
+                    </div>
+                    <div class="service__bg">
+                        <img src="@img/jpg/wildlife_photography.jpg" alt="" class="service__img">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="example">
+        <div class="container container--sml">
+            <div class="example__wrap">
+                <div class="example__content">
+                    <h2 class="example__title text text--strch" tabindex="0">Sunset at Mount Fuji</h2>
+                    <p class="example__descr text" tabindex="0">
+                        Duis tristique sed lorem a vestibulum.
+                        Cras commodo consequat orci, in convallis risus egestas non.
+                    </p>
+                </div>
+                <div class="example__bg">
+                    <img src="@img/jpg/japan.jpg" alt="" class="example__img">
+                    <ul class="photo-meta">
+                        <li class="photo-meta__meta">
+                            <svg class="photo-meta__ico photo-meta__ico--shutter" width="25" height="25">
+                                <use xlink:href="#ico_shutter"></use>
+                            </svg>
+                            <span class="photo-meta__value">1/2000s</span>
+                        </li>
+                        <li class="photo-meta__meta">
+                            <svg class="photo-meta__ico photo-meta__ico--aperture" width="25" height="25">
+                                <use xlink:href="#ico_aperture"></use>
+                            </svg>
+                            <span class="photo-meta__value">f/11</span>
+                        </li>
+                        <li class="photo-meta__meta">
+                            <svg class="photo-meta__ico photo-meta__ico--iso" width="25" height="25">
+                                <use xlink:href="#ico_iso"></use>
+                            </svg>
+                            <span class="photo-meta__value">100</span>
+                        </li>
+                        <li class="photo-meta__meta">
+                            <svg class="photo-meta__ico photo-meta__ico--location" width="25" height="25">
+                                <use xlink:href="#ico_location"></use>
+                            </svg>
+                            <span class="photo-meta__value">Icland</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gear">
+        <div class="gear__wrap container container--no-pad">
+            <div class="gear__inner">
+                <div class="gear__content">
+                    <h2 class="gear__title h3-like" tabindex="0">The tools that we use.</h2>
+                    <p class="gear__suptitle suptitle text text--strch" tabindex="0">The Gear cage</p>
+                    <p class="gear__text text" tabindex="0">
+                        The say that "no place is boring if you've had
+                        a good night's sleep and have a pocket full of unexposed film".
+                        While we don't shoot (a lot) of film these days
+                        — these are the tools that we actually use
+                        everyday to capture the amazing things around us.
+                    </p>
+                    <a href="" class="gear__btn btn">
+                        <svg width="20" height="20">
+                            <use xlink:href="#aperture"></use>
+                        </svg>
+                        <span>Check it out</span>
+                    </a>
+                </div>
+            </div>
+            <div class="gear__preview">
+                <img src="@img/jpg/gear.jpg" alt="" class="gear__img">
+                <ul class="photo-meta">
+                    <li class="photo-meta__meta">
+                        <svg class="photo-meta__ico photo-meta__ico--shutter" width="25" height="25">
+                            <use xlink:href="#ico_shutter"></use>
+                        </svg>
+                        <span class="photo-meta__value">1&#34;</span>
+                    </li>
+                    <li class="photo-meta__meta">
+                        <svg class="photo-meta__ico photo-meta__ico--aperture" width="25" height="25">
+                            <use xlink:href="#ico_aperture"></use>
+                        </svg>
+                        <span class="photo-meta__value">f/16</span>
+                    </li>
+                    <li class="photo-meta__meta">
+                        <svg class="photo-meta__ico photo-meta__ico--iso" width="25" height="25">
+                            <use xlink:href="#ico_iso"></use>
+                        </svg>
+                        <span class="photo-meta__value">400</span>
+                    </li>
+                    <li class="photo-meta__meta">
+                        <svg class="photo-meta__ico photo-meta__ico--location" width="25" height="25">
+                            <use xlink:href="#ico_location"></use>
+                        </svg>
+                        <span class="photo-meta__value">Japan</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="example">
+        <div class="container container--sml">
+            <div class="example__wrap">
+                <div class="example__content">
+                    <h2 class="example__title text text--strch" tabindex="0">Monstera Leafs</h2>
+                    <p class="example__descr text" tabindex="0">
+                        Vestibulum sit amet urna turpis.
+                        Mauris euismod elit et nisi ultrices,
+                        ut faucibus orci tincidunt.
+                    </p>
+                </div>
+                <div class="example__bg">
+                    <img src="@img/jpg/costa_rica.jpg" alt="" class="example__img">
+                    <ul class="photo-meta">
+                        <li class="photo-meta__meta">
+                            <svg class="photo-meta__ico photo-meta__ico--shutter" width="25" height="25">
+                                <use xlink:href="#ico_shutter"></use>
+                            </svg>
+                            <span class="photo-meta__value">1&#34;</span>
+                        </li>
+                        <li class="photo-meta__meta">
+                            <svg class="photo-meta__ico photo-meta__ico--aperture" width="25" height="25">
+                                <use xlink:href="#ico_aperture"></use>
+                            </svg>
+                            <span class="photo-meta__value">f/16</span>
+                        </li>
+                        <li class="photo-meta__meta">
+                            <svg class="photo-meta__ico photo-meta__ico--iso" width="25" height="25">
+                                <use xlink:href="#ico_iso"></use>
+                            </svg>
+                            <span class="photo-meta__value">400</span>
+                        </li>
+                        <li class="photo-meta__meta">
+                            <svg class="photo-meta__ico photo-meta__ico--location" width="25" height="25">
+                                <use xlink:href="#ico_location"></use>
+                            </svg>
+                            <span class="photo-meta__value">Japan</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="clients">
+        <div class="container container--sml">
+            <div class="clients__wrap">
+                <h2 class="clients__title h2-like" tabindex="0">Past clients</h2>
+                <p class="clients__subtitle subtitle text text--strch" tabindex="0">Trusted by your favourite companies</p>
+                <ul class="clients__list">
+                    <li class="clients__item" title="Hill&Hayes" tabindex="0">
+                        <svg width="128" height="64" class="clients__logo">
+                            <use xlink:href="#hillNhayes"></use>
+                        </svg>
+                    </li>
+                    <li class="clients__item" title="Ricksgransen" tabindex="0">
+                        <svg width="128" height="64" class="clients__logo">
+                            <use xlink:href="#ricksgransen"></use>
+                        </svg>
+                    </li>
+                    <li class="clients__item" title="Studio Cai" tabindex="0">
+                        <svg width="128" height="64" class="clients__logo">
+                            <use xlink:href="#studioCai"></use>
+                        </svg>
+                    </li>
+                    <li class="clients__item" title="Chill Industries" tabindex="0">
+                        <svg width="128" height="64" class="clients__logo">
+                            <use xlink:href="#chillIndustries"></use>
+                        </svg>
+                    </li>
+                    <li class="clients__item" title="Stockholm" tabindex="0">
+                        <svg width="128" height="64" class="clients__logo">
+                            <use xlink:href="#stockholm"></use>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="example">
+        <div class="container container--sml">
+            <div class="example__wrap">
+                <div class="example__content">
+                    <h2 class="example__title text text--strch" tabindex="0">Star fall in the Himalayas</h2>
+                    <p class="example__descr text" tabindex="0">
+                        Nulla rhoncus feugiat eros quis consectetur.
+                        Morbi neque ex, condimentum dapibus congue et,
+                        vulputate ut ligula.
+                    </p>
+                </div>
+                <div class="example__bg">
+                    <img src="@img/jpg/nepal.jpg" alt="" class="example__img">
+                    <ul class="photo-meta">
+                        <li class="photo-meta__meta">
+                            <svg class="photo-meta__ico photo-meta__ico--shutter" width="25" height="25">
+                                <use xlink:href="#ico_shutter"></use>
+                            </svg>
+                            <span class="photo-meta__value">6&#34;</span>
+                        </li>
+                        <li class="photo-meta__meta">
+                            <svg class="photo-meta__ico photo-meta__ico--aperture" width="25" height="25">
+                                <use xlink:href="#ico_aperture"></use>
+                            </svg>
+                            <span class="photo-meta__value">f/11</span>
+                        </li>
+                        <li class="photo-meta__meta">
+                            <svg class="photo-meta__ico photo-meta__ico--iso" width="25" height="25">
+                                <use xlink:href="#ico_iso"></use>
+                            </svg>
+                            <span class="photo-meta__value">800</span>
+                        </li>
+                        <li class="photo-meta__meta">
+                            <svg class="photo-meta__ico photo-meta__ico--location" width="25" height="25">
+                                <use xlink:href="#ico_location"></use>
+                            </svg>
+                            <span class="photo-meta__value">Nepal</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="container">
+            <div class="contact__wrap">
+                <h2 class="contact__title h2-like" tabindex="0">Need help with photography or videography?</h2>
+                <p class="contact__subtitle subtitle" tabindex="0">We're here for you!</p>
+                <a href="" class="contact__btn btn">
+                    <svg width="20" height="20">
+                        <use xlink:href="#aperture"></use>
+                    </svg>
+                    <span>Get in touch</span>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+@@include('./layout/footer.html')
+@@include('./layout/svgSprite.html')
+</body>
+</html>

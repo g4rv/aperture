@@ -1,0 +1,68 @@
+@use 'colors' as *;
+@use 'font-style' as *;
+@use 'medias' as *;
+@use 'z-index' as *;
+
+:root {
+    //colors
+    @each $hue, $shades in $colors {
+        @each $shade, $color in $shades {
+            --clra-#{$hue}-#{$shade}: #{$color};
+            --clr-#{$hue}-#{$shade}: hsl(#{$color});
+        }
+    }
+
+    //Font
+    --ff-pop: "Poppins";
+
+    //font-sizes
+    @each $screen-size, $font-size in $font-sizes {
+        @if $screen-size == small { 
+            //mobile
+            @each $size, $value in $font-size{
+                --fz-#{$size}: #{$value};
+            }
+        } @else if $screen-size == mid {
+            @include breakpoint-up(small) {
+                //tablet
+                @each $size, $value in $font-size{
+                    --fz-#{$size}: #{$value};
+                }
+            }
+        } @else if $screen-size == big {
+            @include breakpoint-up(large) {
+                //desktop
+                @each $size, $value in $font-size{
+                    --fz-#{$size}: #{$value};
+                }
+            }
+        }
+    }
+
+    //font-weight
+    @each $weight, $value in $font-weights {
+        --fw-#{$weight}: #{$value};
+    }
+
+    //line-height
+    @each $height, $value in $line-heights {
+        --lh-#{$height}: #{$value};
+    }
+
+    //z-index
+    @each $index, $value in $z-index {
+        --i-#{$index}: #{$value};
+    }
+
+    // section padding
+    --sect-pad-s: 6.25rem 0;
+    --sect-pad-m: 7.5rem 0 6.25rem;
+
+    // container
+    --cont-pad: 30px;
+    --cont-sml-w: 1200px;
+    --cont-def-w: 1440px;
+
+    // 100vh
+    --screen-h: 100vh;
+}

@@ -1,0 +1,17 @@
+@mixin link-hover {
+    background: 
+        linear-gradient(
+            to right,
+            transparent 37.5%,
+            currentColor 0 50%,
+            transparent 0
+        ) 
+        var(--d, 100%) 100% / 200% 1px no-repeat;
+        transition: .5s ease-in-out;
+    ;
+
+    &:hover, &:focus {
+        --d: 0%;
+        transition: .5s ease-in-out;
+    }
+}

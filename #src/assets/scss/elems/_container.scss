@@ -1,0 +1,13 @@
+.container {
+    width: min(calc(100% - var(--cont-pad)), var(--cont-def-w));
+    height: 100%;
+    margin-inline: auto;
+
+    &--sml {
+        width: min(calc(100% - var(--cont-pad)), var(--cont-sml-w));
+    }
+
+    &--no-pad {
+        --cont-pad: 0px;
+    }
+}

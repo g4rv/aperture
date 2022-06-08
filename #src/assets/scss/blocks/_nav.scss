@@ -1,0 +1,85 @@
+@use '../alias/medias' as *;
+@use '../alias/mixins' as *;
+
+.nav {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    &__wrap {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        top: 100%;
+        left: 0;
+        padding: 75px 25px 45px;
+        width: 100%;
+        height: 70vh;
+        background-color: var(--clr-ntrl-40);
+        box-shadow: inset 0px 15px 20px -10px hsla(var(--clra-ntrl-1)/ .3);
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+}
+
+@media (hover: hover) {
+    .nav {
+        &__link {
+            @include link-hover;
+        }
+    }
+}
+
+@include breakpoint-up(medium) {
+    .nav {
+        &__wrap {
+            position: static;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            height: unset;
+            padding: unset;
+            background-color: transparent;
+            box-shadow: unset;
+        }
+
+        &__list {
+            flex-direction: row;
+            margin-left: auto;
+            gap: 1rem;
+
+        }
+
+        &__item {
+            flex: 1 1;
+            white-space: nowrap;
+
+            &:first-child {
+                font-size: var(--fz-14);
+            }
+        }
+    }
+}
+
+@include breakpoint-up(large) {
+    .nav {
+        &__list {
+            gap: 2rem;
+        }
+    }
+}

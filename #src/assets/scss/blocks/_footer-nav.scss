@@ -1,0 +1,47 @@
+@use '../alias/medias' as *;
+@use '../alias/mixins' as *;
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    gap: 2.5rem;
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        max-width: 220px;
+        gap: .5rem;
+    }
+
+    &__title {
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__item {
+        color: var(--clr-ntrl-1);
+    }
+
+    &__link {
+    }
+}
+
+@media (hover: hover) {
+    .footer-nav {
+        &__link {
+            @include link-hover;
+        }
+    }
+}
+
+@include breakpoint-up(xsmall) {
+    .footer-nav {
+        flex-direction: row;
+    }
+}

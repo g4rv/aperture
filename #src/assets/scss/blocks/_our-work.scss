@@ -1,0 +1,29 @@
+@use '../alias/medias' as *;
+
+.our-work {
+    padding: 3rem 0 5rem;
+    background-color: var(--clr-ntrl-0);
+
+    &__title {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    &__subtitle {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    &__list {
+    }
+}
+
+@include breakpoint-up(medium) {
+    .our-work {
+        padding: var(--sect-pad-m);
+
+        &__subtitle {
+            margin-bottom: 3rem;
+        }
+    }
+}

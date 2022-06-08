@@ -1,0 +1,69 @@
+@use '../alias/medias' as *;
+
+.gear {
+    height: min(var(--screen-h), calc(100vh - var(--header-h)));
+    max-height: 600px;
+    background-color: var(--clr-ntrl-0);
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+        gap: 2rem;
+    }
+
+    &__inner {
+        padding: 3rem 1rem 0;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__suptitle {
+        margin-bottom: .5rem;
+    }
+
+    &__text {
+        margin-bottom: 1.25rem;
+        color: var(--clr-ntrl-1);
+    }
+
+    &__btn {
+    }
+
+    &__preview {
+        position: relative;
+    }
+
+    &__img {
+        position: absolute;
+        height: 100%;
+    }
+}
+
+@include breakpoint-up(medium) {
+    
+    .gear {
+        &__wrap {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__inner {
+            align-self: center;
+            padding: 0 4rem;
+        }
+
+        &__content {
+            align-items: flex-start;
+            text-align: start;
+        }
+    }
+}

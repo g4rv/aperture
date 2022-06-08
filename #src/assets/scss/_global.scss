@@ -1,0 +1,11 @@
+body {
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    font-family: var(--ff-pop);
+    color: var(--clr-ntrl-1);
+    overflow: overlay;
+}
+
+html {
+    font-size: 100%;
+}

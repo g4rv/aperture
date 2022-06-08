@@ -1,0 +1,52 @@
+@use '../alias/medias' as *;
+
+.photo-meta {
+    position: absolute;
+    display: flex;
+    gap: .5rem;
+    bottom: 35px;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: fit-content;
+    color: var(--clr-ntrl-1);
+
+    &__meta {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 5px;
+    }
+
+    &__ico {
+        fill: var(--clr-ntrl-1);
+
+        &--shutter {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        &--aperture {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        &--iso {
+            width: 2rem;
+            height: 1rem;
+        }
+
+        &--location {
+            width: .75rem;
+            height: 1rem;
+        }
+    }
+}
+
+@include breakpoint-up(medium) {
+    .photo-meta {
+        bottom: 2.5rem;
+        left: unset;
+        right: 2.5rem;
+        gap: 1rem;
+    }
+}

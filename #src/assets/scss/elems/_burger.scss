@@ -1,0 +1,37 @@
+@use '../alias/medias' as *;
+
+.burger {
+    position: relative;
+    min-width: 30px;
+    min-height: 30px;
+
+    div {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 80%;
+        height: 4px;
+        background-color: var(--clr-ntrl-20);
+
+        &:first-child {
+            top: 5px;
+            bottom: unset;
+            height: 2px;
+        }
+
+        &:last-child {
+            top: unset;
+            bottom: 5px;
+            height: 2px;
+        }
+    }
+}
+
+@include breakpoint-up(medium) {
+    .burger {
+        display: none;
+    }
+}
