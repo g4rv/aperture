@@ -284,7 +284,6 @@ body {
   --cont-pad: 30px;
   --cont-sml-w: 1200px;
   --cont-def-w: 1440px;
-  --screen-h: 100vh;
 }
 
 body {
@@ -602,13 +601,13 @@ html {
 }
 
 .main {
-  margin-top: var(--header-h);
+  margin-top: var(--header-h, 1rem);
 }
 
 .hero {
   position: relative;
   padding: 3rem 0 6rem;
-  height: min(var(--screen-h), 100vh - var(--header-h));
+  height: calc(100vh - var(--header-h, 0px));
   max-height: 900px;
   background-color: var(--clr-ntrl-0);
 }
@@ -742,7 +741,7 @@ html {
 }
 
 .gear {
-  height: min(var(--screen-h), 100vh - var(--header-h));
+  height: calc(100vh - var(--header-h, 0px));
   max-height: 600px;
   background-color: var(--clr-ntrl-0);
 }
@@ -790,7 +789,7 @@ html {
 .example {
   position: relative;
   padding: 5rem 0 8rem;
-  height: min(var(--screen-h), 100vh - var(--header-h));
+  height: calc(100vh - var(--header-h, 0px));
   background-color: var(--clr-ntrl-0);
 }
 
@@ -1024,13 +1023,13 @@ html {
 
   .nav__wrap {
     position: static;
-    display: flex;
     flex-direction: row;
     gap: 1rem;
     height: unset;
     padding: unset;
     background-color: transparent;
     box-shadow: unset;
+    transform: translateX(0);
   }
 
   .nav__list {

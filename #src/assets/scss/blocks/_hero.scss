@@ -3,7 +3,7 @@
 .hero {
     position: relative;
     padding: 3rem 0 6rem;
-    height: min(var(--screen-h), calc(100vh - var(--header-h)));
+    height: calc(100vh - var(--header-h, 0px));
     max-height: 900px;
     background-color: var(--clr-ntrl-0);
 

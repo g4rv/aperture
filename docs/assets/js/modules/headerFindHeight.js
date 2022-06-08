@@ -5,4 +5,4 @@ const headerFindHeight = () => {
     console.log(headerHeight)
 }
 
-headerFindHeight();
+export default headerFindHeight;

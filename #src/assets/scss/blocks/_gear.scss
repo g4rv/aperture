@@ -1,7 +1,7 @@
 @use '../alias/medias' as *;
 
 .gear {
-    height: min(var(--screen-h), calc(100vh - var(--header-h)));
+    height: calc(100vh - var(--header-h, 0px));
     max-height: 600px;
     background-color: var(--clr-ntrl-0);
 

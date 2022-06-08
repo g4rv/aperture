@@ -3,7 +3,7 @@
 .example {
     position: relative;
     padding: 5rem 0 8rem;
-    height: min(var(--screen-h), calc(100vh - var(--header-h)));
+    height: calc(100vh - var(--header-h, 0px));
     background-color: var(--clr-ntrl-0);
 
     &__wrap {

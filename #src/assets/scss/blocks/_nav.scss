@@ -52,13 +52,13 @@
     .nav {
         &__wrap {
             position: static;
-            display: flex;
             flex-direction: row;
             gap: 1rem;
             height: unset;
             padding: unset;
             background-color: transparent;
             box-shadow: unset;
+            transform: translateX(0);
         }
 
         &__list {
